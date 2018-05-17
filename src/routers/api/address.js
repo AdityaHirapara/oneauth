@@ -27,7 +27,7 @@ router.post('/', cel.ensureLoggedIn('/login'), function (req, res) {
             countryId: req.body.countryId,
             demographicId: demographics.id,
             // if no addresses, then first one added is primary
-            primary: !demographics.address || demographics.addresses.length === 0
+            primary: !demographics.addresses || demographics.addresses.length === 0
 
         }))
             .then((address) => res.redirect('/address/' + address.id))

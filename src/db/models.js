@@ -118,7 +118,7 @@ const Address = db.define('address', definitions.demographics.address, {
         {
             name: 'unique_primary_address_index',
             unique: true,
-            fields: ['demographicId'],
+            fields: ['id'],
             where: {primary: true}
         }
     ]
