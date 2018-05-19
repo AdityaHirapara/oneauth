@@ -1,0 +1,28 @@
+{{!< centercolumn}}
+
+{{#each apps as |app|}}
+
+    <div class="row p-2">
+        <div class="col p-2">
+            <div class="row h1 m-2">{{app.name}}</div>
+            <div class="row">
+                <div class="col align-self-center align-items-center">
+                    <a href="{{app.domain}}"><div class="btn btn-sm btn-info">Open App</div></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{{else}}
+
+    <div class="row p-2">
+        <div class="col p-2 text-center">
+            <h3 class="thin-font">
+                You have authorised no apps yet
+            </h3>
+        </div>
+    </div>
+
+
+{{/each}}
